@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stillpoint Health, Brand and Identity Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#f1efe7; --card:#ffffff; --ink:#28302b; --ink-soft:#5a635c;
+  --sage:#7d8c75; --sage-deep:#586353; --sage-tint:#e7ece1;
+  --clay:#b08968; --clay-deep:#866346; --line:#ddd8cc;
+  --shadow:0 18px 50px -24px rgba(40,48,43,.30);
+  --card-shadow:0 8px 26px -16px rgba(40,48,43,.26);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15;letter-spacing:-.01em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-deep);margin-bottom:16px}
+
+/* ---- cover ---- */
+.cover{padding:76px 0 58px;border-bottom:1px solid var(--line)}
+.cover h1{font-size:clamp(34px,4.6vw,52px);margin-bottom:18px;max-width:20ch}
+.cover h1 em{font-style:italic;color:var(--sage-deep)}
+.cover p{font-size:18px;color:var(--ink-soft);max-width:64ch}
+.meta{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px}
+.meta span{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 15px;font-size:13px;color:var(--ink-soft)}
+
+/* ---- generic section ---- */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.sec-head{max-width:68ch;margin-bottom:40px}
+.sec-head h2{font-size:clamp(26px,3.1vw,34px);margin-bottom:12px}
+.sec-head p{color:var(--ink-soft);font-size:16.5px}
+
+.pull{background:var(--sage-tint);border-radius:16px;padding:30px 34px;font-family:'Fraunces',Georgia,serif;
+  font-size:19px;line-height:1.5;color:var(--ink);max-width:74ch}
+.pull cite{display:block;margin-top:14px;font-family:'Inter';font-size:13px;font-style:normal;color:var(--ink-soft);letter-spacing:.02em}
+
+/* ---- concept card ---- */
+.concept{background:var(--card);border:1px solid var(--line);border-radius:20px;
+  box-shadow:var(--card-shadow);overflow:hidden;margin-bottom:34px}
+.concept-top{display:grid;grid-template-columns:300px 1fr;gap:0;align-items:stretch}
+.mark-stage{background:var(--sage-tint);display:grid;place-items:center;padding:52px 30px;position:relative}
+.mark-stage .num{position:absolute;top:18px;left:22px;font-family:'Fraunces';font-size:14px;color:var(--sage-deep);letter-spacing:.06em}
+.mark-stage svg{width:132px;height:132px}
+.concept-body{padding:38px 40px}
+.concept-body h3{font-size:26px;margin-bottom:4px}
+.concept-body .tag{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--clay-deep);margin-bottom:16px}
+.concept-body p{color:var(--ink-soft);font-size:15.5px;margin-bottom:14px;max-width:60ch}
+.concept-body p strong{color:var(--ink);font-weight:600}
+.expresses{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.expresses span{border:1px solid var(--line);border-radius:100px;padding:6px 13px;font-size:12.5px;color:var(--ink-soft)}
+
+/* ---- applications strip ---- */
+.apps{border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+.app{padding:26px 20px;text-align:center;border-right:1px solid var(--line)}
+.app:last-child{border-right:none}
+.app .label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-deep);margin-bottom:16px}
+.app .frame{display:grid;place-items:center;min-height:66px}
+.app .cap{font-size:11.5px;color:var(--ink-soft);margin-top:12px}
+
+/* lockup */
+.lockup{display:inline-flex;align-items:center;gap:11px;font-family:'Fraunces';font-size:19px;font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+.lockup svg{width:32px;height:32px;flex:none}
+.lockup.stacked{flex-direction:column;gap:9px;font-size:17px}
+.lockup.small{font-size:15px}
+.lockup.small svg{width:26px;height:26px}
+
+/* favicon + avatar */
+.fav{width:16px;height:16px}
+.fav-row{display:flex;align-items:flex-end;gap:16px;justify-content:center}
+.fav-row .u{text-align:center}
+.fav-row .u span{display:block;font-size:10.5px;color:var(--ink-soft);margin-top:7px}
+.avatar{width:56px;height:56px;border-radius:50%;background:var(--sage-deep);display:grid;place-items:center}
+.avatar svg{width:32px;height:32px}
+.ondark{background:var(--ink);border-radius:12px;padding:16px 18px;display:inline-grid;place-items:center}
+.ondark svg{width:40px;height:40px}
+
+/* ---- comparison ---- */
+.compare{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:34px;box-shadow:var(--card-shadow)}
+.compare-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;text-align:center}
+.compare-grid .col h4{font-size:15px;margin-bottom:20px;color:var(--ink)}
+.scale-row{display:flex;align-items:flex-end;justify-content:center;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.scale-row .s{text-align:center}
+.scale-row .s span{display:block;font-size:10px;color:var(--ink-soft);margin-top:6px}
+
+/* ---- palette ---- */
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.sw{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.sw .chip{height:74px}
+.sw .info{padding:14px 15px}
+.sw b{display:block;font-family:'Fraunces';font-size:14.5px;margin-bottom:3px}
+.sw code{font-size:12px;color:var(--ink-soft);font-family:ui-monospace,Menlo,monospace}
+.sw .ratio{display:block;font-size:11.5px;margin-top:7px;color:var(--sage-deep);font-weight:600}
+.sw .ratio.warn{color:var(--clay-deep)}
+
+/* ---- type ---- */
+.type-row{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 30px;margin-bottom:16px}
+.type-row .lbl{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-deep);margin-bottom:14px}
+.type-row .spec{font-size:13px;color:var(--ink-soft);margin-top:10px}
+.serif-sample{font-family:'Fraunces';font-size:34px;line-height:1.2}
+.sans-sample{font-family:'Inter';font-size:17px;color:var(--ink-soft);max-width:62ch}
+
+/* ---- ruled out ---- */
+.avoid{display:flex;flex-wrap:wrap;gap:10px}
+.avoid span{background:var(--card);border:1px solid var(--line);border-radius:100px;padding:9px 16px;font-size:13.5px;color:var(--ink-soft);position:relative}
+.avoid span::before{content:"×";color:var(--clay-deep);font-weight:700;margin-right:8px}
+
+/* ---- questions ---- */
+.q-list{display:grid;gap:16px;counter-reset:q}
+.q{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 30px;display:flex;gap:20px;box-shadow:var(--card-shadow)}
+.q .n{counter-increment:q;flex:none;width:36px;height:36px;border-radius:50%;background:var(--sage-tint);
+  color:var(--sage-deep);font-family:'Fraunces';font-size:16px;display:grid;place-items:center}
+.q .n::before{content:counter(q)}
+.q h4{font-size:17.5px;margin-bottom:6px}
+.q p{font-size:14.5px;color:var(--ink-soft);max-width:62ch}
+
+.note{background:var(--sage-tint);border-radius:14px;padding:22px 26px;font-size:15px;color:var(--ink);max-width:74ch;margin-top:28px}
+.note b{font-weight:600}
+
+footer{padding:44px 0 60px;font-size:13.5px;color:var(--ink-soft)}
+
+@media(max-width:900px){
+  .concept-top{grid-template-columns:1fr}
+  .apps,.swatches,.compare-grid{grid-template-columns:repeat(2,1fr)}
+  .app{border-bottom:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .apps,.swatches,.compare-grid{grid-template-columns:1fr}
+  .wrap{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ SVG MARK DEFINITIONS ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- A. The Stillpoint: unequal rings, gaps widening outward -->
+    <g id="markA">
+      <circle cx="24" cy="24" r="3.4" fill="currentColor"/>
+      <circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M37.00 15.56 A15.50 15.50 0 1 1 27.49 8.90" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/>
+      <path d="M44.54 16.12 A22.00 22.00 0 1 1 24.38 2.00" fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round"/>
+    </g>
+    <!-- B. Equilibrium: a circle bisected by its own horizon -->
+    <g id="markB">
+      <circle cx="24" cy="24" r="13.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M1.5 24 H46.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <!-- C. Within: open ring, inner form held off-centre -->
+    <g id="markC">
+      <path d="M43.38 17.33 A20.50 20.50 0 1 1 30.67 4.62" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="20.6" cy="27.4" r="6" fill="currentColor"/>
+    </g>
+
+    <!-- ==== SMALL-SIZE VARIANTS ====
+         Below roughly 24px the full marks lose their detail. Real identity systems
+         ship a simplified variant for favicons and avatars: fewer elements, heavier
+         strokes, same recognisable shape. -->
+    <g id="markA-sm">
+      <circle cx="24" cy="24" r="4.6" fill="currentColor"/>
+      <circle cx="24" cy="24" r="11" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <path d="M42.13 15.55 A20.00 20.00 0 1 1 25.74 4.08" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g id="markB-sm">
+      <circle cx="24" cy="24" r="14" fill="none" stroke="currentColor" stroke-width="2.8"/>
+      <path d="M3 24 H45" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+    </g>
+    <g id="markC-sm">
+      <path d="M42.91 17.49 A20.00 20.00 0 1 1 30.51 5.09" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="20.4" cy="27.6" r="7.5" fill="currentColor"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="wrap">
+    <div class="eyebrow">Stillpoint Health · Brand &amp; Visual Identity</div>
+    <h1>Three directions for the <em>mark</em>.</h1>
+    <p>Concepts drawn from the themes you described: balance, clarity, adaptation, resilience, rhythm, stillness, and the relationship between a person and their environment. Each is shown the way you'll actually encounter it: in the site header, as a browser tab icon, as a profile picture, and reversed on dark.</p>
+    <div class="meta">
+      <span>Prepared for Dr. Michael Palladino, ND</span>
+      <span>Concept round, nothing final</span>
+      <span>Every element still open to change</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRINCIPLE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The brief we're designing to</div>
+      <h2>The mark should sit quietly inside the feeling</h2>
+    </div>
+    <div class="pull">
+      “When someone spends a few minutes on the website, I'd like them to come away feeling that they've found someone who understands the complexity of their health concerns and can help them make sense of what they're experiencing. To me, that feeling is ultimately more important than any individual logo, graphic, or design element.”
+      <cite>Michael, 20 June</cite>
+    </div>
+    <div class="note">
+      <b>That line shaped every decision here.</b> None of these three announce themselves. They are quiet, geometric and timeless rather than expressive, the kind of mark that still looks right in ten years and never competes with the words on the page.
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIRECTION A ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Direction One</div>
+      <h2>The Stillpoint</h2>
+    </div>
+
+    <div class="concept">
+      <div class="concept-top">
+        <div class="mark-stage" style="color:var(--sage-deep)">
+          <div class="num">01</div>
+          <svg viewBox="0 0 48 48"><use href="#markA"/></svg>
+        </div>
+        <div class="concept-body">
+          <h3>The Stillpoint</h3>
+          <div class="tag">Closest to the writing already on the site</div>
+          <p>Rings radiating out from a still centre, the calm point from which a whole system can finally be seen clearly. It's the idea the homepage already opens with, given a form.</p>
+          <p><strong>The important detail:</strong> the rings are deliberately imperfect. They sit at uneven intervals and each one opens a little wider than the last. Perfectly concentric circles read as a target or a wifi symbol; this asymmetry is what makes it read instead as something <em>settling</em>, a system finding its centre rather than a bullseye.</p>
+          <div class="expresses">
+            <span>Stillness</span><span>Clarity</span><span>Adaptation</span><span>Rhythm</span><span>Cycles</span>
+          </div>
+        </div>
+      </div>
+      <div class="apps">
+        <div class="app">
+          <div class="label">Site header</div>
+          <div class="frame"><span class="lockup"><svg viewBox="0 0 48 48" style="color:var(--sage-deep)"><use href="#markA"/></svg>Stillpoint Health</span></div>
+          <div class="cap">Horizontal lockup</div>
+        </div>
+        <div class="app">
+          <div class="label">Browser tab</div>
+          <div class="frame"><div class="fav-row">
+            <div class="u"><svg class="fav" viewBox="0 0 48 48" style="color:var(--sage-deep)"><use href="#markA-sm"/></svg><span>16px</span></div>
+            <div class="u"><svg width="32" height="32" viewBox="0 0 48 48" style="color:var(--sage-deep)"><use href="#markA-sm"/></svg><span>32px</span></div>
+          </div></div>
+          <div class="cap">Holds its shape when tiny</div>
+        </div>
+        <div class="app">
+          <div class="label">Profile picture</div>
+          <div class="frame"><div class="avatar" style="color:#fff"><svg viewBox="0 0 48 48"><use href="#markA-sm"/></svg></div></div>
+          <div class="cap">Google, social</div>
+        </div>
+        <div class="app">
+          <div class="label">Reversed</div>
+          <div class="frame"><div class="ondark" style="color:#e7ece1"><svg viewBox="0 0 48 48"><use href="#markA"/></svg></div></div>
+          <div class="cap">On dark backgrounds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIRECTION B ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Direction Two</div>
+      <h2>Equilibrium</h2>
+    </div>
+
+    <div class="concept">
+      <div class="concept-top">
+        <div class="mark-stage" style="color:var(--sage-deep)">
+          <div class="num">02</div>
+          <svg viewBox="0 0 48 48"><use href="#markB"/></svg>
+        </div>
+        <div class="concept-body">
+          <h3>Equilibrium</h3>
+          <div class="tag">The quietest of the three</div>
+          <p>A circle meeting its own horizon, a form held in balance, exactly level. The line runs past the circle on both sides, so the shape sits <em>within</em> something larger than itself rather than floating free.</p>
+          <p><strong>Why it might be right:</strong> it is almost nothing. No decoration, no gesture, nothing that dates. It reads as balance and as a horizon at the same time, and it's the least likely of the three to ever feel like a trend you have to move on from.</p>
+          <div class="expresses">
+            <span>Balance</span><span>Stillness</span><span>Person &amp; environment</span><span>Clarity</span>
+          </div>
+        </div>
+      </div>
+      <div class="apps">
+        <div class="app">
+          <div class="label">Site header</div>
+          <div class="frame"><span class="lockup"><svg viewBox="0 0 48 48" style="color:var(--sage-deep)"><use href="#markB"/></svg>Stillpoint Health</span></div>
+          <div class="cap">Horizontal lockup</div>
+        </div>
+        <div class="app">
+          <div class="label">Browser tab</div>
+          <div class="frame"><div class="fav-row">
+            <div class="u"><svg class="fav" viewBox="0 0 48 48" style="color:var(--sage-deep)"><use href="#markB-sm"/></svg><span>16px</span></div>
+            <div class="u"><svg width="32" height="32" viewBox="0 0 48 48" style="color:var(--sage-deep)"><use href="#markB-sm"/></svg><span>32px</span></div>
+          </div></div>
+          <div class="cap">Simplest at small sizes</div>
+        </div>
+        <div class="app">
+          <div class="label">Profile picture</div>
+          <div class="frame"><div class="avatar" style="color:#fff"><svg viewBox="0 0 48 48"><use href="#markB-sm"/></svg></div></div>
+          <div class="cap">Google, social</div>
+        </div>
+        <div class="app">
+          <div class="label">Reversed</div>
+          <div class="frame"><div class="ondark" style="color:#e7ece1"><svg viewBox="0 0 48 48"><use href="#markB"/></svg></div></div>
+          <div class="cap">On dark backgrounds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIRECTION C ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Direction Three</div>
+      <h2>Within</h2>
+    </div>
+
+    <div class="concept">
+      <div class="concept-top">
+        <div class="mark-stage" style="color:var(--sage-deep)">
+          <div class="num">03</div>
+          <svg viewBox="0 0 48 48"><use href="#markC"/></svg>
+        </div>
+        <div class="concept-body">
+          <h3>Within</h3>
+          <div class="tag">The most direct answer to your philosophy</div>
+          <p>A person held inside their environment. The outer ring is open rather than closed, an environment that acts on you rather than a container that seals you in.</p>
+          <p><strong>The deliberate choice:</strong> the inner form sits <em>off-centre</em>. A person isn't at the tidy middle of their circumstances; they're somewhere inside them, adapting. That small asymmetry is what stops this being a generic circle-in-a-circle, and it's the part that speaks most directly to how you describe your work.</p>
+          <div class="expresses">
+            <span>Person &amp; environment</span><span>Adaptation</span><span>Resilience</span><span>Openness</span>
+          </div>
+        </div>
+      </div>
+      <div class="apps">
+        <div class="app">
+          <div class="label">Site header</div>
+          <div class="frame"><span class="lockup"><svg viewBox="0 0 48 48" style="color:var(--sage-deep)"><use href="#markC"/></svg>Stillpoint Health</span></div>
+          <div class="cap">Horizontal lockup</div>
+        </div>
+        <div class="app">
+          <div class="label">Browser tab</div>
+          <div class="frame"><div class="fav-row">
+            <div class="u"><svg class="fav" viewBox="0 0 48 48" style="color:var(--sage-deep)"><use href="#markC-sm"/></svg><span>16px</span></div>
+            <div class="u"><svg width="32" height="32" viewBox="0 0 48 48" style="color:var(--sage-deep)"><use href="#markC-sm"/></svg><span>32px</span></div>
+          </div></div>
+          <div class="cap">Strongest silhouette</div>
+        </div>
+        <div class="app">
+          <div class="label">Profile picture</div>
+          <div class="frame"><div class="avatar" style="color:#fff"><svg viewBox="0 0 48 48"><use href="#markC-sm"/></svg></div></div>
+          <div class="cap">Google, social</div>
+        </div>
+        <div class="app">
+          <div class="label">Reversed</div>
+          <div class="frame"><div class="ondark" style="color:#e7ece1"><svg viewBox="0 0 48 48"><use href="#markC"/></svg></div></div>
+          <div class="cap">On dark backgrounds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIDE BY SIDE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Side by side</div>
+      <h2>How each one holds up as it shrinks</h2>
+      <p>A logo spends most of its life small: a browser tab, a search result, a profile picture. This is the honest test, and it is where the first direction needed work: at 16px the full four-ring version turns to mush. Below 24px all three switch to a <strong>simplified variant</strong> with fewer elements, heavier strokes and the same recognisable shape. That is standard practice, and it is shown here rather than hidden.</p>
+    </div>
+    <div class="compare">
+      <div class="compare-grid">
+        <div class="col">
+          <h4>01 · The Stillpoint</h4>
+          <div class="scale-row" style="color:var(--sage-deep)">
+            <div class="s"><svg width="64" height="64" viewBox="0 0 48 48"><use href="#markA"/></svg><span>64</span></div>
+            <div class="s"><svg width="32" height="32" viewBox="0 0 48 48"><use href="#markA-sm"/></svg><span>32</span></div>
+            <div class="s"><svg width="16" height="16" viewBox="0 0 48 48"><use href="#markA-sm"/></svg><span>16</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <h4>02 · Equilibrium</h4>
+          <div class="scale-row" style="color:var(--sage-deep)">
+            <div class="s"><svg width="64" height="64" viewBox="0 0 48 48"><use href="#markB"/></svg><span>64</span></div>
+            <div class="s"><svg width="32" height="32" viewBox="0 0 48 48"><use href="#markB-sm"/></svg><span>32</span></div>
+            <div class="s"><svg width="16" height="16" viewBox="0 0 48 48"><use href="#markB-sm"/></svg><span>16</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <h4>03 · Within</h4>
+          <div class="scale-row" style="color:var(--sage-deep)">
+            <div class="s"><svg width="64" height="64" viewBox="0 0 48 48"><use href="#markC"/></svg><span>64</span></div>
+            <div class="s"><svg width="32" height="32" viewBox="0 0 48 48"><use href="#markC-sm"/></svg><span>32</span></div>
+            <div class="s"><svg width="16" height="16" viewBox="0 0 48 48"><use href="#markC-sm"/></svg><span>16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOTIF ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The recurring element</div>
+      <h2>Beyond the logo itself</h2>
+      <p>You asked whether Stillpoint could have one subtle visual element that becomes recognisable throughout the site. That turned out to be the more demanding half of the request, and it changed how these were judged. A mark that cannot produce a working motif is a weaker direction, so each one is tested against that here rather than assumed.</p>
+    </div>
+
+    <div class="type-row">
+      <div class="lbl">01 The Stillpoint</div>
+      <p style="margin:0 0 14px;font-size:15px">This makes a genuinely beautiful quiet background element. Set very large and cropped by the corner of a page, or sitting faintly behind a section, it works better than either of the other two.</p>
+      <div style="color:var(--sage);margin:6px 0 4px">
+        <svg width="100%" height="46" viewBox="0 0 400 46" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M 340 60 A 58 58 0 0 0 340 -14" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M 356 66 A 74 74 0 0 0 356 -20" fill="none" stroke="currentColor" stroke-width="1.1"/>
+        </svg>
+      </div>
+      <div class="spec">It does not, however, produce a heading rule or a bullet. Nested arcs cannot become a rule without inventing a curve so slight it disappears in print, and a single arc fragment at bullet size is hard to read. We could have filled the gap with something plausible, but you asked for one element that carries across the whole site, and this direction only delivers part of that.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="lbl">02 Equilibrium</div>
+      <p style="margin:0 0 16px;font-size:15px">The strongest motif of the three, and nothing had to be invented to find it. The mark already is a rule with a circle on it.</p>
+      <div style="color:var(--sage-deep)">
+        <div style="font-family:'Fraunces';font-size:19px;font-weight:600;color:var(--ink);margin-bottom:9px">A different way of understanding your health</div>
+        <svg width="100%" height="8" viewBox="0 0 400 8" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M 0 4 H 400" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+        <div style="margin-top:14px;font-size:15px;color:var(--ink-soft)">
+          <div style="display:flex;align-items:flex-start;gap:11px;margin-bottom:7px"><svg width="11" height="11" viewBox="0 0 12 12" style="margin-top:7px;flex:none"><path d="M 0.5 6 H 11.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Energy production and recovery</span></div>
+          <div style="display:flex;align-items:flex-start;gap:11px;margin-bottom:7px"><svg width="11" height="11" viewBox="0 0 12 12" style="margin-top:7px;flex:none"><path d="M 0.5 6 H 11.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Stress response and adaptation</span></div>
+          <div style="display:flex;align-items:flex-start;gap:11px"><svg width="11" height="11" viewBox="0 0 12 12" style="margin-top:7px;flex:none"><path d="M 0.5 6 H 11.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>How the different systems interact</span></div>
+        </div>
+      </div>
+      <div class="spec">A rule under a heading is the most common element in design, so the rule itself is not ownable. What is ownable is that every rule in this system extends past its container into the margin on both sides, which is the mark's overhang promoted into a layout rule. That is distinctive, and it holds consistently across a whole site.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="lbl">03 Within</div>
+      <p style="margin:0 0 16px;font-size:15px">The motif is not the dot on its own, which would be indistinguishable from a default bullet. It is the relationship between the ring and the dot, which is what the mark is actually about. The ring is unrolled into a rule, and the dot keeps its off-centre position along it.</p>
+      <div style="color:var(--sage-deep)">
+        <div style="font-family:'Fraunces';font-size:19px;font-weight:600;color:var(--ink);margin-bottom:9px">A different way of understanding your health</div>
+        <svg width="100%" height="10" viewBox="0 0 400 10" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M 0 5 H 400" fill="none" stroke="currentColor" stroke-width="1" opacity="0.55"/><circle cx="134.8" cy="5" r="3.2" fill="currentColor"/></svg>
+        <div style="margin-top:14px;font-size:15px;color:var(--ink-soft)">
+          <div style="display:flex;align-items:flex-start;gap:11px;margin-bottom:7px"><svg width="9" height="9" viewBox="0 0 12 12" style="margin-top:8px;flex:none"><circle cx="6" cy="6" r="3" fill="currentColor"/></svg><span>Energy production and recovery</span></div>
+          <div style="display:flex;align-items:flex-start;gap:11px;margin-bottom:7px"><svg width="9" height="9" viewBox="0 0 12 12" style="margin-top:8px;flex:none"><circle cx="6" cy="6" r="3" fill="currentColor"/></svg><span>Stress response and adaptation</span></div>
+          <div style="display:flex;align-items:flex-start;gap:11px"><svg width="9" height="9" viewBox="0 0 12 12" style="margin-top:8px;flex:none"><circle cx="6" cy="6" r="3" fill="currentColor"/></svg><span>How the different systems interact</span></div>
+        </div>
+      </div>
+      <div class="spec">At large scale and in the lighter Sage, the arc alone becomes a quiet background element, cropped by the edge of a section so only its curve passes through. That is where the lighter green earns its place without ever being asked to carry text.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECOMMENDATION ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">If you want our view</div>
+      <h2>We would choose Within</h2>
+      <p>You asked for several concepts before settling on a direction, so all three are here as real options. But you have told us a great deal about how you think, and it would be a waste not to give you a recommendation you can push back on.</p>
+    </div>
+    <div class="pull" style="margin-bottom:24px">Your own description of your work is about the relationship between a person and their environment, and about symptoms as meaningful responses to that environment rather than isolated faults. Within is close to a direct statement of that: something held inside a form that is open, that acts on it, that does not seal it in. The gap is the whole argument of the mark, and it is your argument rather than a borrowed one.</div>
+    <div class="note" style="margin-top:0">
+      <b>What we give up by choosing it.</b> Equilibrium has the stronger motif and behaves better at very small sizes. Those are real advantages and we do not want to pretend otherwise. If the recurring element across the site matters more to you than the mark itself, Equilibrium is the better answer and we would be comfortable building it.
+    </div>
+    <div class="note">
+      <b>Where Within is weak.</b> An open ring sits near loading-spinner territory, and its bullet is the least distinctive element in the set. Neither is fatal, and both are manageable in how the mark is used.
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORDMARK ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The wordmark</div>
+      <h2>Set in the same voice as the site</h2>
+      <p>The name is set in Fraunces, already the typeface of every heading on the site, so the logo and the writing speak as one thing rather than two. The tagline sits beneath the name in Inter, at a size that lets it be read without competing.</p>
+      <p>In the finished files the lettering is converted to outlines rather than live text. That means the logo renders identically for a printer, a sign maker, or anyone opening the file on a machine that does not have Fraunces installed. It is a small detail that prevents a common and expensive kind of mistake.</p>
+    </div>
+
+    <div class="type-row">
+      <div class="lbl">Primary lockup</div>
+      <span class="lockup" style="font-size:26px;align-items:flex-start">
+        <svg viewBox="0 0 48 48" style="width:44px;height:44px;color:var(--sage-deep);margin-top:3px"><use href="#markA"/></svg>
+        <span style="display:block">Stillpoint Health
+          <span style="display:block;font-family:'Inter';font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px">Where complexity becomes clarity</span>
+        </span>
+      </span>
+      <div class="spec">For the site header, letterhead, and anywhere there's horizontal room.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="lbl">Stacked lockup</div>
+      <span class="lockup stacked" style="font-size:22px">
+        <svg viewBox="0 0 48 48" style="width:46px;height:46px;color:var(--sage-deep)"><use href="#markA"/></svg>
+        <span style="display:block;text-align:center">Stillpoint Health
+          <span style="display:block;font-family:'Inter';font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px">Where complexity becomes clarity</span>
+        </span>
+      </span>
+      <div class="spec">For square spaces such as social profiles, print and signage.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="lbl">With your name <span style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink-soft)">optional variant</span></div>
+      <span class="lockup" style="font-size:26px;align-items:flex-start">
+        <svg viewBox="0 0 48 48" style="width:44px;height:44px;color:var(--sage-deep);margin-top:3px"><use href="#markA"/></svg>
+        <span style="display:block">Stillpoint Health
+          <span style="display:block;font-family:'Inter';font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:5px">Michael Palladino, ND</span>
+        </span>
+      </span>
+      <div class="spec">For a solo practice there is a real argument for your name living inside the mark, since it is what patients are actually choosing. Equally, some practitioners prefer to keep the practice and the person distinct.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PALETTE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Colour</div>
+      <h2>The palette, made official</h2>
+      <p>These colours were chosen while building the site rather than as a deliberate brand decision you were ever asked to approve. This is the moment to confirm or change them, and it is far cheaper to change them now than later. Two values were quietly failing legibility standards and have been corrected.</p>
+    </div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#f1efe7;border-bottom:1px solid var(--line)"></div><div class="info"><b>Paper</b><code>#F1EFE7</code><span class="ratio">Page background</span></div></div>
+      <div class="sw"><div class="chip" style="background:#28302b"></div><div class="info"><b>Ink</b><code>#28302B</code><span class="ratio">11.8:1 · headings</span></div></div>
+      <div class="sw"><div class="chip" style="background:#586353"></div><div class="info"><b>Deep Sage</b><code>#586353</code><span class="ratio">5.5:1 · buttons, labels</span></div></div>
+      <div class="sw"><div class="chip" style="background:#7d8c75"></div><div class="info"><b>Sage</b><code>#7D8C75</code><span class="ratio warn">Decorative only</span></div></div>
+      <div class="sw"><div class="chip" style="background:#866346"></div><div class="info"><b>Clay</b><code>#866346</code><span class="ratio">5.4:1 · warm accent</span></div></div>
+    </div>
+    <div class="note">
+      <b>What was corrected.</b> The small uppercase labels that appear on every section of the site, “MY APPROACH” and “PATIENT EXPERIENCES”, sat at 3.1:1 contrast, below the accessibility standard for text that size. The warm accent was at 2.75:1. Both now pass comfortably. Given how many of your patients live with brain fog, light sensitivity and visual strain, this felt like the wrong place to let a design preference win.
+    </div>
+  </div>
+</section>
+
+<!-- ============ TYPE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Typography</div>
+      <h2>Two typefaces, already in use</h2>
+    </div>
+    <div class="type-row">
+      <div class="lbl">Fraunces · headings and the wordmark</div>
+      <div class="serif-sample">A different way of understanding your health</div>
+      <div class="spec">Warm and human rather than corporate. It has enough character to feel like a person wrote the site, without tipping into decorative.</div>
+    </div>
+    <div class="type-row">
+      <div class="lbl">Inter · body text</div>
+      <div class="sans-sample">Sometimes the answer isn't another diagnosis. It's a clearer view of how the different pieces of your health fit together. I help people with complex, chronic symptoms understand why they developed.</div>
+      <div class="spec">Chosen for legibility at length. Neutral on purpose, so the writing carries the tone rather than the letterforms.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RULED OUT ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Staying away from</div>
+      <h2>What we ruled out, and why</h2>
+      <p>The first list is yours. The second is ours, in the same spirit, and we would expect you to reject them too.</p>
+    </div>
+    <div class="avoid" style="margin-bottom:20px">
+      <span>DNA strands</span><span>Leaves</span><span>Trees</span><span>Caduceus</span><span>Lotus flowers</span><span>Medical icons</span>
+    </div>
+    <div class="avoid">
+      <span>Heartbeat lines</span><span>Mortar &amp; pestle</span><span>Cupped hands</span><span>Water droplets</span><span>Mandalas</span><span>Sunrise arcs</span>
+    </div>
+    <div class="note">
+      <b>One direction we drew and then set aside.</b> A wave settling to stillness, holding rhythm, cycles, adaptation and rest in a single form. Conceptually it was the best answer to your brief. But at small sizes it reads as an ECG trace, which lands squarely in the territory you asked us to avoid. Worth mentioning so you know it was considered rather than missed.
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUESTIONS ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Over to you</div>
+      <h2>Three questions</h2>
+      <p>A rough reaction is genuinely more useful than a considered one. We'd rather know early that something isn't you.</p>
+    </div>
+    <div class="q-list">
+      <div class="q">
+        <div class="n"></div>
+        <div>
+          <h4>Does one of the three resonate, or is one clearly not you?</h4>
+          <p>You don't need to choose a winner. Knowing which to stop working on is just as useful. Whichever direction you lean toward, we'll refine it properly and come back with it applied across the site.</p>
+        </div>
+      </div>
+      <div class="q">
+        <div class="n"></div>
+        <div>
+          <h4>Should the tagline live inside the logo, or only on the site?</h4>
+          <p>You liked the idea of carrying "Where complexity becomes clarity" through the branding, so it sits in the lockups above. The alternative is to keep the logo to the name alone and let the tagline do its work in the writing. Both are defensible, and it is genuinely a preference. The third lockup shows the same question for your name, which is worth answering at the same time.</p>
+        </div>
+      </div>
+      <div class="q">
+        <div class="n"></div>
+        <div>
+          <h4>Is there any colour here you don't like?</h4>
+          <p>The greens and warm neutrals came out of building the site, not out of a brand decision you were ever asked to approve. If they aren't right, now is a far cheaper moment to change them than later.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>One thing worth raising.</b> “Still point” is also a specific term in craniosacral therapy, and a number of other practices use the Stillpoint name. Neither is a problem and neither is a reason to change anything, but it is worth knowing whether you would like the mark to lean gently toward that association or deliberately away from it.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Concept round for Stillpoint Health · Nothing here is final, and every element remains open to change.
+  </div>
+</footer>
+
+</body>
+</html>
