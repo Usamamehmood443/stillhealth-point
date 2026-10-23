@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stillpoint Growth Plan</title>
+<meta name="description" content="8-week SEO and growth plan for Stillpoint Health: weekly targets, keywords, competitors, AI visibility and articles.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a quiet reading column with a sticky contents rail on wide screens; the 8-week plan is a vertical run of week cards. */
+:root {
+  --bg: #f4f6f3;
+  --surface: #ffffff;
+  --ink: #1d2a26;
+  --muted: #5b6b65;
+  --line: #d9e1dc;
+  --accent: #2f6656;
+  --accent-soft: #e3eee9;
+  --you: #8a5a1c;
+  --you-soft: #f6ecdc;
+  --m2: #4b6a8a;
+  --m2-soft: #e4ebf3;
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body: "Figtree", -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121a17; --surface: #1a2420; --ink: #e4ebe7; --muted: #9bada6; --line: #2c3a35;
+    --accent: #7cc2ab; --accent-soft: #1f3530; --you: #e2b06b; --you-soft: #382c1b;
+    --m2: #9db8d6; --m2-soft: #1f2a36; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121a17; --surface: #1a2420; --ink: #e4ebe7; --muted: #9bada6; --line: #2c3a35;
+  --accent: #7cc2ab; --accent-soft: #1f3530; --you: #e2b06b; --you-soft: #382c1b;
+  --m2: #9db8d6; --m2-soft: #1f2a36; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+img { max-width: 100%; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+.wrap { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; padding-block: 56px 96px; }
+@media (max-width: 900px) { .wrap { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-block: 32px 64px; } }
+
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; font-size: 14px; }
+nav.toc p { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; font-weight: 600; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; border-left: 1px solid var(--line); }
+nav.toc a { display: block; padding: 5px 0 5px 14px; color: var(--muted); text-decoration: none; margin-left: -1px; border-left: 2px solid transparent; }
+nav.toc a:hover { color: var(--ink); border-left-color: var(--accent); }
+@media (max-width: 900px) { nav.toc { display: none; } }
+
+main { min-width: 0; max-width: 760px; }
+header.hero { padding-bottom: 32px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+.eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 12px; }
+h1 { font-family: var(--display); font-weight: 500; font-size: clamp(36px, 6vw, 54px); line-height: 1.05; margin: 0 0 14px; text-wrap: balance; letter-spacing: -.01em; }
+.byline { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+.lead { font-size: 19px; line-height: 1.55; margin: 0; max-width: 62ch; }
+
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-top: 28px; }
+.stat { background: var(--surface); padding: 16px; display: grid; gap: 2px; align-content: start; }
+.stat b { font-family: var(--display); font-size: 32px; font-weight: 500; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 13px; color: var(--muted); line-height: 1.35; }
+@media (max-width: 600px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.caption { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+
+section { padding-top: 48px; scroll-margin-top: 16px; }
+h2 { font-family: var(--display); font-weight: 500; font-size: 32px; line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+h3 { font-size: 17px; font-weight: 600; margin: 28px 0 8px; }
+p { margin: 0 0 14px; max-width: 68ch; }
+ul, ol { margin: 0 0 14px; padding-left: 22px; max-width: 68ch; }
+li { margin-bottom: 6px; }
+li::marker { color: var(--accent); }
+
+.callout { background: var(--accent-soft); border-radius: 10px; padding: 16px 18px; margin: 18px 0; }
+.callout p:last-child { margin-bottom: 0; }
+
+.table-scroll { overflow-x: auto; margin: 14px 0 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; line-height: 1.45; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; background: var(--bg); }
+td.num { color: var(--muted); font-variant-numeric: tabular-nums; width: 2.5em; }
+td.kw { font-weight: 600; }
+.wide table { min-width: 620px; }
+
+.who { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 9px; border-radius: 999px; white-space: nowrap; background: var(--accent-soft); color: var(--accent); vertical-align: 1px; }
+.who.you { background: var(--you-soft); color: var(--you); }
+
+/* 8-week strip */
+.strip { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 4px; margin: 18px 0 6px; }
+.strip a { display: grid; gap: 2px; text-decoration: none; padding: 10px 6px 8px; border-radius: 8px; background: var(--accent-soft); color: var(--accent); text-align: center; }
+.strip a.m2 { background: var(--m2-soft); color: var(--m2); }
+.strip b { font-size: 15px; font-variant-numeric: tabular-nums; }
+.strip span { font-size: 11px; line-height: 1.2; }
+.strip-legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); margin: 0 0 8px; }
+.strip-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; background: var(--accent); vertical-align: 0; }
+.strip-legend i.m2 { background: var(--m2); }
+@media (max-width: 560px) { .strip { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+.month-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 34px 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+.month-head.m2 { border-bottom-color: var(--m2); }
+.month-head h3 { margin: 0; font-family: var(--display); font-size: 24px; font-weight: 500; }
+.month-head span { font-size: 14px; color: var(--muted); }
+
+.weeks { display: grid; gap: 12px; }
+.week { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 4px 16px; scroll-margin-top: 16px; }
+.week .wk { grid-row: span 3; display: grid; align-content: start; gap: 2px; }
+.week .wk b { font-family: var(--display); font-size: 30px; font-weight: 500; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.week.m2 .wk b { color: var(--m2); }
+.week .wk small { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.week .dates { font-size: 13px; color: var(--muted); }
+.week h4 { margin: 0; font-size: 17px; font-weight: 600; }
+.week ul { margin: 6px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; max-width: none; }
+.week li { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: start; font-size: 15px; padding-bottom: 6px; border-bottom: 1px dashed var(--line); }
+.week li:last-child { border-bottom: 0; padding-bottom: 0; }
+.week .win { grid-column: 2; margin-top: 8px; font-size: 14px; background: var(--bg); border-radius: 8px; padding: 8px 12px; }
+.week .win b { color: var(--accent); }
+.week.m2 .win b { color: var(--m2); }
+.week .art { font-weight: 600; }
+@media (max-width: 560px) {
+  .week { grid-template-columns: minmax(0, 1fr); }
+  .week .wk { grid-row: auto; grid-auto-flow: column; justify-content: start; align-items: baseline; gap: 10px; }
+  .week .win { grid-column: 1; }
+  .week li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .week li .who { justify-self: start; }
+}
+
+.steps { counter-reset: s; list-style: none; padding: 0; display: grid; gap: 10px; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 12px; margin: 0; }
+.steps li::before { content: counter(s); width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 14px; display: grid; place-items: center; }
+
+.asks { list-style: none; padding: 0; display: grid; gap: 8px; max-width: none; }
+.asks li { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px 12px 44px; position: relative; margin: 0; }
+.asks li::before { content: ""; position: absolute; left: 16px; top: 16px; width: 14px; height: 14px; border: 2px solid var(--accent); border-radius: 4px; }
+.asks .by { display: block; font-size: 13px; color: var(--you); font-weight: 600; margin-top: 2px; }
+
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="toc" aria-label="Contents">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#today">Where we are today</a></li>
+      <li><a href="#plan">8-week plan</a></li>
+      <li><a href="#competitors">Competitors</a></li>
+      <li><a href="#keywords">Target keywords</a></li>
+      <li><a href="#google">Growing Google traffic</a></li>
+      <li><a href="#ai">Visibility in AI tools</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#website">Website changes</a></li>
+      <li><a href="#measures">How we'll measure it</a></li>
+      <li><a href="#needs">What we need from you</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <p class="eyebrow">Stillpoint Health &middot; SEO and growth plan</p>
+      <h1>Helping the right patients find Stillpoint</h1>
+      <p class="byline">Prepared by Tayyba Jehangir &middot; 22 October 2026 &middot; 8 weeks, 27 Oct to 21 Dec 2026</p>
+      <p class="lead">Over the next 8 weeks, we will help people with complex chronic symptoms find Stillpoint through Google and AI assistants, understand your approach, and request a consultation. Each week has a clear target, so you can see progress every Friday.</p>
+    </header>
+
+    <section id="today">
+      <h2>Where we are today</h2>
+      <div class="stats">
+        <div class="stat"><b>25</b><span>clicks from Google</span></div>
+        <div class="stat"><b>119</b><span>times shown in Google results</span></div>
+        <div class="stat"><b>0</b><span>searches without your name (visible yet)</span></div>
+        <div class="stat"><b>2</b><span>pages getting clicks: Homepage (18), About Dr. Palladino (8)</span></div>
+      </div>
+      <p class="caption">Google Search Console, 23 Sep to 21 Oct 2026.</p>
+      <p style="margin-top:18px">Today almost everyone who finds the site already knows your name. The opportunity is the much larger group searching for help with mold illness, POTS, MCAS, chronic fatigue, thyroid issues and gut problems, who don't know Stillpoint yet.</p>
+      <div class="callout"><p><b>Already done in October:</b> leftover template pages removed from Google, three new condition pages live (Digestive, Dysautonomia/POTS &amp; MCAS, Autoimmune &amp; Complex Illness), homepage cards linked, and Search Console tracking connected.</p></div>
+    </section>
+
+    <section id="plan">
+      <h2>The 8-week plan</h2>
+      <p>Month 1 fixes the foundations, the consultation flow and your presence outside the website. Month 2 deepens the pages, builds trust and sets up the articles. Every Friday you get a short update with what was finished that week.</p>
+      <div class="strip-legend"><span><i></i>Month 1: Foundations</span><span><i class="m2"></i>Month 2: Depth and trust</span></div>
+      <div class="strip">
+        <a href="#w1"><b>W1</b><span>Quick fixes</span></a>
+        <a href="#w2"><b>W2</b><span>Requests</span></a>
+        <a href="#w3"><b>W3</b><span>Profile</span></a>
+        <a href="#w4"><b>W4</b><span>Listings</span></a>
+        <a href="#w5" class="m2"><b>W5</b><span>Trust</span></a>
+        <a href="#w6" class="m2"><b>W6</b><span>Depth</span></a>
+        <a href="#w7" class="m2"><b>W7</b><span>Reach</span></a>
+        <a href="#w8" class="m2"><b>W8</b><span>Review</span></a>
+      </div>
+      <p class="caption"><span class="who">Our team</span> = website, content and tracking work we do. <span class="who you">You</span> = a short input or approval from you.</p>
+
+      <div class="month-head"><h3>Month 1 &middot; Foundations</h3><span>27 Oct to 23 Nov 2026</span></div>
+      <div class="weeks">
+        <article class="week" id="w1">
+          <div class="wk"><small>Week</small><b>1</b></div>
+          <span class="dates">27 Oct to 2 Nov</span>
+          <div>
+            <h4>Quick fixes and clear structure</h4>
+            <ul>
+              <li><span>Confirm where you can see patients (California only, or wider)</span><span class="who you">You</span></li>
+              <li><span>New main headings with the condition name on all 10 pages</span><span class="who">Our team</span></li>
+              <li><span>"Conditions" menu at the top and a 3-column footer</span><span class="who">Our team</span></li>
+              <li><span>Small fixes: redirects for old addresses, robots file, image alt text</span><span class="who">Our team</span></li>
+              <li><span>Add the site to Bing and ask Google to re-crawl the changed pages</span><span class="who">Our team</span></li>
+            </ul>
+          </div>
+          <p class="win"><b>By Friday:</b> every condition page is one click from anywhere on the site.</p>
+        </article>
+
+        <article class="week" id="w2">
+          <div class="wk"><small>Week</small><b>2</b></div>
+          <span class="dates">3 to 9 Nov</span>
+          <div>
+            <h4>A smoother consultation request</h4>
+            <ul>
+              <li><span>New "Request a Consultation" page and thank-you page, with the improved form</span><span class="who">Our team</span></li>
+              <li><span>Instant confirmation email to the person and an alert to the practice</span><span class="who">Our team</span></li>
+              <li><span>Track every consultation request</span><span class="who">Our team</span></li>
+              <li><span>"Request a Consultation" button under each "Is this you?" section</span><span class="who">Our team</span></li>
+              <li><span class="art">Article 1: Signs of mold illness: symptoms people often miss</span><span class="who">Our team, you review</span></li>
+            </ul>
+          </div>
+          <p class="win"><b>By Friday:</b> the new request flow is live, and we send you a test request so you see what arrives.</p>
+        </article>
+
+        <article class="week" id="w3">
+          <div class="wk"><small>Week</small><b>3</b></div>
+          <span class="dates">10 to 16 Nov</span>
+          <div>
+            <h4>Your presence outside the website</h4>
+            <ul>
+              <li><span>Structured data update: credentials, phone, FAQs, profile links</span><span class="who">Our team</span></li>
+              <li><span>Google Business Profile created (address hidden); you complete verification</span><span class="who">Our team + you</span></li>
+              <li><span>Directory listings, part 1: AANP, CNDA, IFM, LinkedIn</span><span class="who">Our team + you</span></li>
+            </ul>
+          </div>
+          <p class="win"><b>By Friday:</b> Google Business Profile submitted and the first listings live.</p>
+        </article>
+
+        <article class="week" id="w4">
+          <div class="wk"><small>Week</small><b>4</b></div>
+          <span class="dates">17 to 23 Nov</span>
+          <div>
+            <h4>More listings, deeper pages, first review requests</h4>
+            <ul>
+              <li><span>Directory listings, part 2: Healthgrades, The Filtery, Bastyr alumni</span><span class="who">Our team + you</span></li>
+              <li><span>Expand the Chronic Fatigue page to about 1,000 to 1,200 words</span><span class="who">Our team, you review</span></li>
+              <li><span>Review request message and link ready; start sending it after visits</span><span class="who you">You</span></li>
+              <li><span class="art">Article 2: POTS and MCAS together: why they so often overlap</span><span class="who">Our team, you review</span></li>
+              <li><span>Month 1 report with the first Search Console numbers</span><span class="who">Our team</span></li>
+            </ul>
+          </div>
+          <p class="win"><b>By Friday:</b> all Month 1 foundations done and your first monthly report.</p>
+        </article>
+      </div>
+
+      <div class="month-head m2"><h3>Month 2 &middot; Depth and trust</h3><span>24 Nov to 21 Dec 2026</span></div>
+      <div class="weeks">
+        <article class="week m2" id="w5">
+          <div class="wk"><small>Week</small><b>5</b></div>
+          <span class="dates">24 to 30 Nov &middot; Thanksgiving week</span>
+          <div>
+            <h4>Trust signals on every page</h4>
+            <ul>
+              <li><span>Expand the Thyroid &amp; Hormones page</span><span class="who">Our team, you review</span></li>
+              <li><span>"Reviewed by Dr. Michael Palladino, ND &middot; Updated [date]" on every condition page</span><span class="who">Our team</span></li>
+              <li><span>Set up the Resources section (blog) and move the first 2 articles into it</span><span class="who">Our team</span></li>
+              <li><span>Send 3 to 5 patient testimonials, each tagged by condition</span><span class="who you">You</span></li>
+            </ul>
+          </div>
+          <p class="win"><b>By Friday:</b> every condition page shows your review and date; the Resources section is live.</p>
+        </article>
+
+        <article class="week m2" id="w6">
+          <div class="wk"><small>Week</small><b>6</b></div>
+          <span class="dates">1 to 7 Dec</span>
+          <div>
+            <h4>Deeper pages and the first AI check</h4>
+            <ul>
+              <li><span>Expand the Mold &amp; Environmental Illness page</span><span class="who">Our team, you review</span></li>
+              <li><span>New "What to expect" page: first visit, membership, what to prepare</span><span class="who">Our team, you review</span></li>
+              <li><span>llms.txt file and the first AI visibility test (10 questions)</span><span class="who">Our team</span></li>
+              <li><span class="art">Article 3: Normal thyroid labs but still exhausted: what else to look at</span><span class="who">Our team, you review</span></li>
+            </ul>
+          </div>
+          <p class="win"><b>By Friday:</b> all 6 condition pages at full depth, and a first score for how AI tools see Stillpoint.</p>
+        </article>
+
+        <article class="week m2" id="w7">
+          <div class="wk"><small>Week</small><b>7</b></div>
+          <span class="dates">8 to 14 Dec</span>
+          <div>
+            <h4>Reaching new audiences</h4>
+            <ul>
+              <li><span>New Long COVID page</span><span class="who">Our team, you review</span></li>
+              <li><span>Add the new testimonials to the matching condition pages</span><span class="who">Our team</span></li>
+              <li><span>Links between articles and condition pages</span><span class="who">Our team</span></li>
+              <li><span>Pitch guest articles and podcast interviews (a list of 10 outlets)</span><span class="who">Our team</span></li>
+            </ul>
+          </div>
+          <p class="win"><b>By Friday:</b> Long COVID page live and the first outreach sent.</p>
+        </article>
+
+        <article class="week m2" id="w8">
+          <div class="wk"><small>Week</small><b>8</b></div>
+          <span class="dates">15 to 21 Dec</span>
+          <div>
+            <h4>Review and next steps</h4>
+            <ul>
+              <li><span class="art">Article 4: Chronic fatigue vs ME/CFS vs long COVID: what's the difference?</span><span class="who">Our team, you review</span></li>
+              <li><span>Ask Google to re-crawl every changed page, and check indexing</span><span class="who">Our team</span></li>
+              <li><span>2-month review against today's numbers</span><span class="who">Our team</span></li>
+              <li><span>Plan for January to March: weekly articles, outreach, reviews</span><span class="who">Our team</span></li>
+            </ul>
+          </div>
+          <p class="win"><b>By Friday:</b> your 2-month report and the plan for the next quarter.</p>
+        </article>
+      </div>
+
+      <div class="callout" style="margin-top:20px"><p><b>From January:</b> one article a week, ongoing outreach and reviews, a monthly report, and the AI visibility test every month.</p></div>
+    </section>
+
+    <section id="competitors">
+      <h2>Competitors: what they have that we don't yet</h2>
+      <p>The practices that show up for these conditions win on the amount of helpful content and on outside trust signals, not on better care. Stillpoint's pages are well written but few. Competitors have dozens to hundreds of pages answering patient questions.</p>
+      <div class="table-scroll wide">
+        <table>
+          <thead><tr><th>Competitor</th><th>What they are</th><th>Site size</th><th>What they do well</th></tr></thead>
+          <tbody>
+            <tr><td class="kw"><a href="https://www.marinnaturalmedicine.com/">Marin Natural Medicine Clinic</a></td><td>California ND clinic (Dr. Todd Maderis). Mold, MCAS, long COVID. Telehealth for California patients</td><td>~47 pages</td><td>"What to expect", "Become a patient" and "Out of area patients" pages. A page per condition and per therapy</td></tr>
+            <tr><td class="kw"><a href="https://www.moldco.com/">MoldCo</a></td><td>Los Angeles digital mold-illness care and testing</td><td>~121 pages</td><td>60+ articles answering mold questions. Free mold risk quiz. Testing prices shown. A public <a href="https://www.moldco.com/editorial-standards">editorial standards</a> page</td></tr>
+            <tr><td class="kw"><a href="https://www.rthm.com/">RTHM</a></td><td>Virtual care for long COVID, ME/CFS, POTS and MCAS</td><td>~1,900 pages</td><td>A resource hub for each condition, a page per treatment, a large article library</td></tr>
+            <tr><td class="kw"><a href="https://www.eds.clinic/">The EDS Clinic</a></td><td>Telehealth clinic for EDS, MCAS and POTS</td><td>~470 pages</td><td>Article categories for each condition, a reviews page, team bios, an interest form, superbill info</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="caption">Page counts from each site's public sitemap, checked 22 Oct 2026. Competitor clinicians also appear in directories such as the <a href="https://www.ifm.org/practitioners/claudia-bustamante">IFM practitioner finder</a> and <a href="https://directory.thefiltery.com/?p=542">The Filtery</a>. We did not find Stillpoint in any of them.</p>
+      <h3>What Stillpoint is missing (potentially)</h3>
+      <ul>
+        <li><b>Articles.</b> 0 today, against 60 to several hundred for competitors. This is the biggest gap.</li>
+        <li><b>A "What to expect" page:</b> your first visit, how membership works, what to prepare.</li>
+        <li><b>Reviews that others can check:</b> Google reviews or a reviews page.</li>
+        <li><b>Directory listings:</b> IFM, AANP, CNDA, The Filtery and similar.</li>
+        <li><b>A simple self-check tool:</b> for example a symptom checklist or an "Is Stillpoint a fit?" quiz.</li>
+        <li><b>A medical review standard:</b> a short page on how content is written and reviewed, plus a "Reviewed by" line on each article.</li>
+        <li><b>Cost clarity:</b> a price range or "from $X". Some competitors also explain superbills for out-of-network insurance.</li>
+      </ul>
+      <div class="callout"><p><b>Where Stillpoint is stronger:</b> one doctor with time and continuity, UC Irvine integrative training, and one place for overlapping conditions (mold, MCAS, POTS, fatigue) that patients usually piece together across specialists. The content plan leads with this.</p></div>
+    </section>
+
+    <section id="keywords">
+      <h2>Target keywords</h2>
+      <p>We target searches from people who already know something is wrong and are looking for someone to help: a condition plus "doctor", "naturopath", "telehealth" or "online". Broad searches like "what is POTS" bring large numbers of the wrong visitors, and big medical sites own them.</p>
+      <h3>Tier 1: one main search per page</h3>
+      <div class="table-scroll wide">
+        <table>
+          <thead><tr><th>Page</th><th>Main search</th><th>Supporting searches</th></tr></thead>
+          <tbody>
+            <tr><td>Homepage</td><td class="kw">naturopathic doctor telehealth</td><td>online naturopathic doctor, integrative doctor for chronic illness</td></tr>
+            <tr><td>Mold &amp; Environmental Illness</td><td class="kw">mold illness doctor</td><td>mold toxicity naturopath, CIRS doctor online, mycotoxin treatment</td></tr>
+            <tr><td>Dysautonomia, POTS &amp; MCAS</td><td class="kw">POTS doctor telehealth</td><td>MCAS doctor, mast cell activation naturopath, dysautonomia treatment</td></tr>
+            <tr><td>Chronic Fatigue &amp; Brain Fog</td><td class="kw">chronic fatigue doctor</td><td>ME/CFS doctor online, long COVID fatigue help, brain fog naturopath</td></tr>
+            <tr><td>Thyroid &amp; Hormones</td><td class="kw">naturopathic thyroid doctor</td><td>normal thyroid labs but still tired, Hashimoto's naturopath</td></tr>
+            <tr><td>Digestive</td><td class="kw">SIBO naturopathic doctor</td><td>IBS naturopath, gut health naturopathic doctor</td></tr>
+            <tr><td>Autoimmune &amp; Complex Illness</td><td class="kw">autoimmune naturopathic doctor</td><td>positive ANA no diagnosis, complex chronic illness doctor</td></tr>
+            <tr><td>Work Together</td><td class="kw">naturopathic doctor membership</td><td>concierge integrative care, functional medicine membership</td></tr>
+            <tr><td>Dr. Palladino</td><td class="kw">Michael Palladino ND</td><td>Bastyr naturopathic doctor, UC Irvine integrative</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Tier 2: question searches (for articles)</h3>
+      <p>People ask these before they look for a doctor: "signs of mold sickness", "POTS and MCAS together", "why am I tired with normal thyroid labs", "SIBO keeps coming back", "what does a naturopathic doctor do". Each article answers one question and links to its condition page.</p>
+      <h3>Tier 3: name and trust searches</h3>
+      <p>"Stillpoint Health", "Dr. Michael Palladino" and reviews. These already work. A Google Business Profile and directory listings will make them stronger.</p>
+      <p>If you can only see patients located in California, we add "California" to a few Tier 1 searches (for example "mold illness doctor California"). Those are easier to win because there is less competition. We check search volumes in Google Keyword Planner and adjust from the real searches in Search Console.</p>
+    </section>
+
+    <section id="google">
+      <h2>How we grow Google traffic</h2>
+      <p>Google ranks health sites on three things: clear and helpful pages, proof that a qualified expert stands behind them, and other trusted sites pointing to them. We work on all three.</p>
+      <h3>On the website</h3>
+      <ul>
+        <li><b>Clearer page headings.</b> The small label above each headline becomes the main heading Google reads, with the condition name in it. Your written headlines stay exactly as they are.</li>
+        <li><b>A "Conditions" menu</b> at the top and a Conditions column in the footer, so every condition page is one click from anywhere.</li>
+        <li><b>Deeper condition pages.</b> Chronic Fatigue, Thyroid and Mold grow to about 1,000 to 1,200 words: symptoms, what you look at, testing, the first visit, related conditions.</li>
+        <li><b>New pages:</b> "What to expect" (first visit and membership) and Long COVID.</li>
+        <li><b>"Reviewed by Dr. Michael Palladino, ND &middot; Updated [date]"</b> on every condition page and article.</li>
+        <li><b>Linking between pages:</b> each condition page links to related conditions and to its articles.</li>
+      </ul>
+      <h3>Technical (behind the scenes)</h3>
+      <ul>
+        <li>Structured data on every page (who you are, credentials, FAQs), so Google and AI tools read it correctly.</li>
+        <li>Redirects for old addresses, a clean robots file, alt text on images, and a page speed check.</li>
+        <li>After each change, we ask Google to re-crawl the page in Search Console.</li>
+      </ul>
+      <h3>Outside the website (trust signals)</h3>
+      <ul>
+        <li><b>Google Business Profile:</b> a service-area practice with the address hidden. It's free, and it's the strongest local and trust signal.</li>
+        <li><b>Directories:</b> AANP Find a Doctor, CNDA, IFM practitioner finder, Healthgrades, The Filtery, Bastyr alumni, LinkedIn.</li>
+        <li><b>Reviews:</b> a simple link sent after visits, asking happy patients for a Google review. A steady flow, not a burst.</li>
+        <li><b>Mentions and links:</b> guest articles or podcast interviews in the chronic illness, mold and POTS communities.</li>
+      </ul>
+      <h3>Conversion (turning visits into requests)</h3>
+      <ul>
+        <li>A dedicated "Request a Consultation" page that every button leads to, explaining what happens next.</li>
+        <li>An optional "How did you hear about us?" question, to see which requests come from Google and which from AI tools.</li>
+        <li>An instant confirmation email to the person and an alert to the practice.</li>
+        <li>A thank-you page, so every request is counted.</li>
+      </ul>
+    </section>
+
+    <section id="ai">
+      <h2>How we grow visibility in AI tools</h2>
+      <p>More patients now ask ChatGPT, Perplexity, Gemini or Google's AI Overviews questions like "who can help with mold illness and POTS over telehealth?" These tools recommend practices they can find, understand, and see confirmed in several places.</p>
+      <ol>
+        <li><b>Be findable in the indexes AI tools use.</b> ChatGPT and Copilot rely on Bing; Google's AI Overviews use Google. We add the site to Bing Webmaster Tools as well as Search Console.</li>
+        <li><b>Say the facts plainly and consistently.</b> The same short description on the website, Google Business Profile, directories and LinkedIn: "Dr. Michael Palladino, ND, Bastyr- and UC Irvine-trained naturopathic doctor, offering whole-person telemedicine for mold illness, POTS, MCAS, chronic fatigue, thyroid, gut and autoimmune conditions."</li>
+        <li><b>Write answers AI tools can quote.</b> Each article and FAQ starts with a direct 2 to 3 sentence answer, then the detail, with headings phrased as questions.</li>
+        <li><b>Get mentioned on other sites.</b> Directories, "best practitioners" lists, patient communities and podcasts count for more here than anything on the site itself.</li>
+        <li><b>Show expertise.</b> Author bio, credentials, "Reviewed by" dates and a short page on how content is written.</li>
+        <li><b>An llms.txt file.</b> A short plain-text summary of the practice for AI crawlers.</li>
+      </ol>
+      <div class="callout"><p><b>How we measure it:</b> each month we ask ChatGPT, Perplexity and Gemini the same 10 questions and record whether Stillpoint is mentioned. We also watch for visits from chatgpt.com and perplexity.ai, and for "AI assistant" answers on the new form question.</p></div>
+    </section>
+
+    <section id="articles">
+      <h2>Articles: steady, not daily</h2>
+      <p>Articles are the biggest growth opportunity and the biggest gap against competitors. We publish <b>one in-depth article every two weeks</b> during the 8 weeks (4 in total), then <b>one a week from January</b>. We don't recommend daily posting.</p>
+      <h3>Why not daily</h3>
+      <ul>
+        <li>For health topics, Google rewards depth and real expertise over volume. Its spam policies target large amounts of thin or mass-produced content.</li>
+        <li>Every article should carry your review and clinical view. Daily posting would become a review burden for you, or produce content without your voice.</li>
+        <li>One strong article (1,200 to 2,000 words) that fully answers a patient's question brings more of the right visitors than five short ones.</li>
+      </ul>
+      <h3>How it works</h3>
+      <ol class="steps">
+        <li>We pick the topic from Search Console data and patient questions, and write the draft.</li>
+        <li>You add a short clinical note or correct anything (about 20 to 30 minutes).</li>
+        <li>We publish it with "Reviewed by Dr. Michael Palladino, ND", link it to the right condition page, and end with an invitation to request a consultation.</li>
+      </ol>
+      <h3>Article topics</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>#</th><th>Article</th><th>Links to</th><th>When</th></tr></thead>
+          <tbody>
+            <tr><td class="num">1</td><td>Signs of mold illness: symptoms people often miss</td><td>Mold</td><td>Week 2</td></tr>
+            <tr><td class="num">2</td><td>POTS and MCAS together: why they so often overlap</td><td>Dysautonomia &amp; MCAS</td><td>Week 4</td></tr>
+            <tr><td class="num">3</td><td>Normal thyroid labs but still exhausted: what else to look at</td><td>Thyroid &amp; Hormones</td><td>Week 6</td></tr>
+            <tr><td class="num">4</td><td>Chronic fatigue vs ME/CFS vs long COVID: what's the difference?</td><td>Chronic Fatigue</td><td>Week 8</td></tr>
+            <tr><td class="num">5</td><td>Mold illness testing: what it can and can't tell you</td><td>Mold</td><td>January</td></tr>
+            <tr><td class="num">6</td><td>Living with MCAS: common triggers and first steps</td><td>Dysautonomia &amp; MCAS</td><td>January</td></tr>
+            <tr><td class="num">7</td><td>Brain fog: common causes beyond "just stress"</td><td>Chronic Fatigue</td><td>January</td></tr>
+            <tr><td class="num">8</td><td>SIBO that keeps coming back: looking upstream</td><td>Digestive</td><td>January</td></tr>
+            <tr><td class="num">9</td><td>Positive ANA but no diagnosis: what now?</td><td>Autoimmune</td><td>February</td></tr>
+            <tr><td class="num">10</td><td>What does a naturopathic doctor do for complex chronic illness?</td><td>Homepage / My Approach</td><td>February</td></tr>
+            <tr><td class="num">11</td><td>How a telemedicine naturopathic visit works</td><td>Work Together</td><td>February</td></tr>
+            <tr><td class="num">12</td><td>How mold, MCAS and fatigue can be connected</td><td>Mold, MCAS, Chronic Fatigue</td><td>February</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="caption">Your list of common patient questions may change the order; those usually make the best articles.</p>
+    </section>
+
+    <section id="website">
+      <h2>Website changes in weeks 1 and 2</h2>
+      <p>The look and your writing stay the same. These changes help Google understand each page and make it easier for visitors to reach you.</p>
+      <h3>Page headings</h3>
+      <p>Google reads one main heading on each page to decide what the page is about. Today that heading is your poetic headline, which has no condition name in it. We make the small label above it the main heading. Your headline stays where it is, in the same style.</p>
+      <div class="table-scroll wide">
+        <table>
+          <thead><tr><th>Page</th><th>New main heading (the small label)</th><th>Your headline (unchanged)</th></tr></thead>
+          <tbody>
+            <tr><td>Home</td><td class="kw">Whole-Person Naturopathic Doctor &middot; Telemedicine</td><td>A different way of understanding your health.</td></tr>
+            <tr><td>Chronic Fatigue</td><td class="kw">Naturopathic Care for Chronic Fatigue &amp; Brain Fog</td><td>When the exhaustion stays&hellip;</td></tr>
+            <tr><td>Mold</td><td class="kw">Mold Illness &amp; Environmental Illness Care</td><td>Complex symptoms connected to your environment.</td></tr>
+            <tr><td>Dysautonomia</td><td class="kw">Dysautonomia, POTS &amp; MCAS Care</td><td>When the systems that should run in the background&hellip;</td></tr>
+            <tr><td>Thyroid</td><td class="kw">Thyroid &amp; Hormone Imbalance Care</td><td>Thyroid, adrenal, and metabolism as one connected system.</td></tr>
+            <tr><td>Digestive</td><td class="kw">Digestive Disorders, SIBO &amp; Gut Health</td><td>When digestion shapes how you feel everywhere else.</td></tr>
+            <tr><td>Autoimmune</td><td class="kw">Autoimmune &amp; Complex Illness Care</td><td>When the immune system turns its attention inward.</td></tr>
+            <tr><td>My Approach</td><td class="kw">My Approach to Whole-Person Naturopathic Care</td><td>A stillpoint is the place&hellip;</td></tr>
+            <tr><td>Work Together</td><td class="kw">Naturopathic Consultations &amp; Membership Care</td><td>Care that fits where you are</td></tr>
+            <tr><td>FAQ</td><td class="kw">Naturopathic Telemedicine: Common Questions</td><td>What to know before you begin</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Menu and footer</h3>
+      <ul>
+        <li><b>Top menu:</b> Home &middot; My Approach &middot; Conditions (dropdown with all 6 condition pages) &middot; Work Together &middot; About &middot; FAQ &middot; Request a Consultation button</li>
+        <li><b>Footer, Conditions column:</b> all 6 condition pages</li>
+        <li><b>Footer, Practice column:</b> My Approach, Work Together, Dr. Palladino, FAQ</li>
+        <li><b>Footer, Get in touch column:</b> Request a Consultation, email, policies</li>
+      </ul>
+      <h3>Requesting a consultation</h3>
+      <p>Today every button jumps to a form at the bottom of the homepage, and nothing is tracked after it is sent. The new flow:</p>
+      <ol class="steps">
+        <li>Every button says <b>"Request a Consultation"</b> and opens one dedicated page.</li>
+        <li>That page explains what happens next: you send a request, we reply within 1 to 2 business days, then a first consultation by video.</li>
+        <li>The form stays short: name and email (required), phone (optional), main concern from a list (Chronic fatigue, Mold, POTS/MCAS, Thyroid/hormones, Digestive, Autoimmune, Prevention, Not sure) with an optional message, and "How did you hear about us?" (optional).</li>
+        <li>After sending, the person sees a thank-you page with what to prepare (recent labs, medication list).</li>
+        <li>The person gets a confirmation email straight away, and the practice gets an alert.</li>
+        <li>Every request is counted, so each month we can see which pages and sources bring real inquiries.</li>
+      </ol>
+      <p>Later, if you want it, people could book their first consultation directly in a calendar instead of sending a request.</p>
+    </section>
+
+    <section id="measures">
+      <h2>How we'll know it's working</h2>
+      <p>The work finishes in 8 weeks, but Google takes time to respond to it, so results lag behind. Expect early signs in December, condition pages ranking from January, and steady requests by February to April. The number that matters most is consultation requests from search.</p>
+      <div class="table-scroll wide">
+        <table>
+          <thead><tr><th>Measure</th><th>Today</th><th>Target, end of Jan 2027</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>Times shown in Google (28 days)</td><td>119</td><td class="kw">1,000+</td><td>Search Console</td></tr>
+            <tr><td>Clicks from Google (28 days)</td><td>25</td><td class="kw">60+</td><td>Search Console</td></tr>
+            <tr><td>Different searches without your name</td><td>0</td><td class="kw">30+</td><td>Search Console</td></tr>
+            <tr><td>Condition pages getting clicks</td><td>0 of 6</td><td class="kw">6 of 6</td><td>Search Console</td></tr>
+            <tr><td>Consultation requests from search or AI</td><td>Not tracked yet</td><td class="kw">Tracked from week 2, growing each month</td><td>Form and thank-you page</td></tr>
+            <tr><td>Mentioned by AI tools (10 test questions)</td><td>Not tested yet</td><td class="kw">First test in week 6; first mentions by spring</td><td>Monthly test</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The targets are goals to steer by, not promises. <b>Every Friday</b> you get a short note on what was finished that week, and <b>each month</b> a report with these numbers and the searches that brought people in.</p>
+    </section>
+
+    <section id="needs">
+      <h2>What we need from you</h2>
+      <p>Keeping to 8 weeks depends on these arriving on time.</p>
+      <ul class="asks">
+        <li>Can you see patients outside California, or only those located in California? This decides which searches we target.<span class="by">Needed in week 1</span></li>
+        <li>Is it okay to show 949-800-6805 publicly?<span class="by">Needed in week 1</span></li>
+        <li>Where do the "73 ratings, 4.9/5" come from? We'd like to link to the source.<span class="by">Needed in week 1</span></li>
+        <li>Do you have a Google Business Profile? If not, we'll set one up together (about 15 minutes of your time for verification).<span class="by">Needed in week 3</span></li>
+        <li>Are you a member of AANP, CNDA or IFM? Do you have a LinkedIn profile? Logins for any listings you already have.<span class="by">Needed in week 3</span></li>
+        <li>10 to 15 questions patients often ask you (these become articles).<span class="by">Needed by week 4</span></li>
+        <li>3 to 5 more patient testimonials you're happy to share, with the condition noted.<span class="by">Needed in week 5</span></li>
+        <li>About 30 minutes every two weeks to review an article draft and page updates (weekly from January).<span class="by">Ongoing</span></li>
+        <li>Optional: a starting price or range for the first consultation, and whether you provide superbills for out-of-network insurance.<span class="by">Any time</span></li>
+      </ul>
+    </section>
+
+    <footer>Stillpoint Health &middot; SEO and growth plan &middot; Prepared by Tayyba Jehangir, 22 October 2026</footer>
+  </main>
+</div>
+</body>
+</html>
